@@ -1,2 +1,2 @@
-# LiveTextEditor
-it is a Text editor which is created using html, css and js
+# CodeEditor
+it is a Code Editor which is created using html, css and js
