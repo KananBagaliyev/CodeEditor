@@ -1,4 +1,3 @@
-
 function update()
 {
 	var iframe = document.getElementById('iframe').contentWindow.document;
@@ -28,28 +27,18 @@ function setupEditor()
   });
 
   editor.focus();
-  
-  if (!window.matchMedia("(min-width: 768px)").matches) {
-    editor.setOptions({
-      fontSize: "12pt",
-      showLineNumbers: true,
-      showGutter: false,
-      vScrollBarAlwaysVisible:true,
-      enableBasicAutocompletion: false, enableLiveAutocompletion: false
-    });
-}
-else{
   editor.setOptions({
     fontSize: "16pt",
     minLines: 2,
-    showLineNumbers: true,
     showGutter: false,
-    vScrollBarAlwaysVisible:true,
-    enableBasicAutocompletion: false, enableLiveAutocompletion: false
+    enableSnippets:true,
+    enableBasicAutocompletion: true,
   });
-}
-  
-
+  if (!window.matchMedia("(min-width: 768px)").matches) {
+    editor.setOptions({
+      fontSize: "12pt",
+    });
+  }
   editor.setShowPrintMargin(false);
   editor.setBehavioursEnabled(false);
 }
